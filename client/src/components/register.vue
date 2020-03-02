@@ -5,27 +5,37 @@
         <form 
           name="tab-tracker-form"
           autocomplete="off">
+           <v-col cols="12" sm="6" md="3">
           <v-text-field
             label="Email"
             v-model="email"
+            placeholder="Placeholder"
+ 
           ></v-text-field>
+           </v-col>
           <br>
+          <v-col cols="12" sm="6" md="3">
+
           <v-text-field
             label="Password"
             type="password"
             v-model="password"
             autocomplete="new-password"
           ></v-text-field>
+                     </v-col>
         </form>
         <br>
         <div class="danger-alert" v-html="error" />
         <br>
+                             <v-col cols="12" sm="6" md="3">
+
         <v-btn
           dark
           class="cyan"
           @click="register">
           Register
         </v-btn>
+                             </v-col>
       </panel>
     </v-flex>
   </v-layout>
@@ -69,5 +79,8 @@ export default {
 <style scoped>
 .error {
   color:red
+}
+.input-group--text-field input{
+  border-bottom: 1px solid black
 }
 </style>
